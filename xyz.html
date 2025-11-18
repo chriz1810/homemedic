@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomeMedic Payment Portal</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(120deg, #eaf4fc 0%, #c9e0f7 100%);
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #3498db;
+            color: #fff;
+            padding: 1.5rem 0;
+            text-align: center;
+            box-shadow: 0 4px 12px #b8d0ea55;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        nav {
+            background: #2980b9;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            font-size: 1.2rem;
+            letter-spacing: .03em;
+        }
+        section {
+            max-width: 600px;
+            background: #fff;
+            margin: 2rem auto 2rem auto;
+            box-shadow: 0 4px 24px #b8d0ea30;
+            border-radius: 16px;
+            padding: 2rem 2.5rem 1.5rem 2.5rem;
+        }
+        section h2 {
+            text-align: center;
+            color: #3498db;
+            margin-bottom: .25rem;
+        }
+        ul {
+            padding-left: 1.2rem;
+            color: #444;
+            font-size: 1rem;
+        }
+        .payment-form {
+            margin-top: 2.5rem;
+        }
+        .payment-form label {
+            display: block;
+            font-weight: 700;
+            color: #2980b9;
+            margin-top: 1rem;
+            margin-bottom: .3rem;
+        }
+        .payment-form input {
+            width: 100%;
+            padding: .5rem;
+            border: 1px solid #b8d0ea;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+        .form-row {
+            display: flex;
+            gap: 1rem;
+        }
+        .form-row input {
+            flex: 1;
+        }
+        .payment-form button {
+            margin-top: 1.5rem;
+            background: #27ae60;
+            color: #fff;
+            border: none;
+            padding: .9rem 2rem;
+            font-size: 1.2rem;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: background .2s;
+            box-shadow: 0 2px 8px #b8d0ea40;
+            width: 100%;
+        }
+        .payment-form button:hover {
+            background: #229353;
+        }
+        .secure-badge {
+            display: flex;
+            align-items: center;
+            margin-top: 1rem;
+            font-size: .95rem;
+            color: #27ae60;
+            font-weight: 700;
+        }
+        .secure-badge span {
+            font-size: 1.3rem;
+            margin-right: .5rem;
+        }
+        @media (max-width: 700px) {
+            section {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>HomeMedic</h1>
+        <p>Quality Healthcare at Home</p>
+    </header>
+    <nav>
+        Collaboration | Diversity & Inclusion | Continuous Learning | Well-being
+    </nav>
+    <section>
+        <h2>Our Company Culture</h2>
+        <ul>
+            <li><strong>Collaboration:</strong> We work together across teams and departments, sharing ideas and supporting one another to deliver quality healthcare at home.</li>
+            <li><strong>Diversity & Inclusion:</strong> We embrace diverse perspectives and believe our unique backgrounds help us provide better solutions for our patients and communities.</li>
+            <li><strong>Continuous Learning:</strong> Personal and professional growth are at the heart of our culture. We sponsor training sessions, certifications, and encourage ongoing education.</li>
+            <li><strong>Well-being:</strong> We champion work-life balance, offer wellness programs, and encourage open communication.</li>
+        </ul>
+        <div class="payment-form">
+            <h2>Secure Payment Portal</h2>
+            <form>
+                <label for="name">Name on Card</label>
+                <input type="text" id="name" name="name" placeholder="Full Name" required>
+
+                <label for="card">Card Number</label>
+                <input type="text" id="card" name="card" maxlength="19" placeholder="1234 5678 9012 3456" required>
+
+                <div class="form-row">
+                    <div>
+                        <label for="expiry">Expiry Date</label>
+                        <input type="text" id="expiry" name="expiry" maxlength="5" placeholder="MM/YY" required>
+                    </div>
+                    <div>
+                        <label for="cvv">CVV</label>
+                        <input type="password" id="cvv" name="cvv" maxlength="4" placeholder="CVV" required>
+                    </div>
+                </div>
+
+                <label for="amount">Amount</label>
+                <input type="number" id="amount" name="amount" min="1" step="0.01" placeholder="Amount (USD)" required>
+
+                <button type="submit" disabled>Pay Securely</button>
+                <div class="secure-badge"><span>🔒</span>Payments protected (Demo only)</div>
+            </form>
+        </div>
+    </section>
+</body>
+</html>

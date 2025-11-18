@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomeMedic Feedback Portal</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(120deg, #232526 0%, #0f2027 100%);
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #ededed;
+        }
+        header {
+            background: #181a1b;
+            display: flex;
+            align-items: center;
+            padding: 1.2rem 2rem 1.2rem 2rem;
+            box-shadow: 0 4px 18px #16191b85;
+        }
+        .logo {
+            height: 52px;
+            margin-right: 18px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px #181a1b40;
+        }
+        .site-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #fff;
+            letter-spacing: .07em;
+        }
+        .section-container {
+            max-width: 540px;
+            background: #1b1f23;
+            margin: 2.5rem auto;
+            box-shadow: 0 4px 32px #16191b40;
+            border-radius: 16px;
+            padding: 2rem 2.2rem 2.5rem 2.2rem;
+        }
+        h2 {
+            text-align: center;
+            color: #52b788;
+            letter-spacing: .04em;
+            margin-bottom: 2rem;
+            font-size: 1.45rem;
+        }
+        form label {
+            display: block;
+            font-weight: 700;
+            color: #ededed;
+            margin-top: .7rem;
+            margin-bottom: .2rem;
+        }
+        form input, form textarea {
+            width: 100%;
+            padding: .55rem;
+            border: 1px solid #2c2f33;
+            border-radius: 8px;
+            background: #222528;
+            color: #ededed;
+            font-size: 1rem;
+            margin-bottom: .4rem;
+            box-shadow: 0 2px 8px #181a1b40;
+        }
+        form textarea {
+            min-height: 80px;
+            resize: vertical;
+        }
+        button {
+            margin-top: 1rem;
+            background: linear-gradient(80deg,#52b788 40%,#2d6a4f 100%);
+            color: #fff;
+            border: none;
+            padding: .85rem 2rem;
+            font-size: 1.08rem;
+            border-radius: 12px;
+            cursor: pointer;
+            font-weight: 700;
+            box-shadow: 0 2px 10px #181a1b60;
+            width: 100%;
+            transition: filter 0.2s, background 0.2s;
+            filter: brightness(0.95);
+        }
+        button:hover {
+            filter: brightness(1.08);
+        }
+        .feedback-viewer {
+            margin-top: 2.8rem;
+        }
+        .feedback-item {
+            background: #232526;
+            border-radius: 12px;
+            padding: 1rem 1.1rem;
+            margin-bottom: 1.1rem;
+            box-shadow: 0 2px 8px #181a1b30;
+        }
+        .feedback-item .author {
+            font-weight: 500;
+            color: #52b788;
+            font-size: 1rem;
+            margin-bottom: .23rem;
+        }
+        .feedback-item .msg {
+            font-size: 1.06rem;
+            color: #ededed;
+        }
+        @media (max-width: 700px) {
+            .section-container {
+                padding: 1rem;
+            }
+            header {
+                padding: 1rem 1rem;
+            }
+            .site-title {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://i.ibb.co/C3QJRpMt/generated-image-3-1.jpg" alt="HomeMedic Logo" class="logo">
+        <span class="site-title">HomeMedic Feedback</span>
+    </header>
+    <div class="section-container">
+        <h2>Submit Your Feedback</h2>
+        <form>
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+            <label for="feedback">Your Feedback</label>
+            <textarea id="feedback" name="feedback" placeholder="Type your feedback here..." required></textarea>
+
+            <button type="submit" disabled>Submit Feedback</button>
+        </form>
+        <div class="feedback-viewer">
+            <h2>Recent Feedback</h2>
+            <div class="feedback-item">
+                <div class="author">Jane Doe</div>
+                <div class="msg">Great experience! The payment portal was easy to use and felt secure.</div>
+            </div>
+            <div class="feedback-item">
+                <div class="author">Rahul</div>
+                <div class="msg">Loved the modern design and the multiple payment options!</div>
+            </div>
+            <div class="feedback-item">
+                <div class="author">Elizabeth</div>
+                <div class="msg">Dark theme looks sharp and professional. Nice work, HomeMedic team!</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

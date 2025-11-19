@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Job Application | HomeMedic Careers</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', Arial, sans-serif;
+      background: linear-gradient(135deg, #20232a 0%, #2d3644 100%);
+      color: #e4ecfa;
+      min-height: 100vh;
+      margin: 0;
+    }
+    header {
+      background: linear-gradient(90deg, #16304e 60%, #36a1f2 100%);
+      color: #e4ecfa;
+      padding: 2em 0 1.6em 0;
+      text-align: center;
+      box-shadow: 0 4px 18px rgba(40,80,160,0.19);
+      margin-bottom: 2em;
+      letter-spacing: 0.01em;
+    }
+    h1 {
+      font-size: 2.2em;
+      margin: 0 0 0.1em 0;
+    }
+    .accent {
+      color: #36a1f2;
+      font-weight: 700;
+    }
+    .application-container {
+      max-width: 550px;
+      margin: 0 auto;
+      background: rgba(35,45,58,0.98);
+      border-radius: 18px;
+      box-shadow: 0 5px 32px rgba(20,30,38,0.16);
+      padding: 2em 2.2em 2.8em 2.2em;
+    }
+    form label {
+      display: block;
+      font-weight: 500;
+      color: #e4ecfa;
+      margin-top: 1.1em;
+      margin-bottom: .20em;
+      letter-spacing: 0.01em;
+    }
+    form input, form select, form textarea {
+      width: 100%;
+      padding: 0.6em;
+      margin-bottom: 0.75em;
+      border-radius: 9px;
+      border: 1px solid #27426b;
+      background: #232936;
+      color: #e4ecfa;
+      font-size: 1.07em;
+      box-shadow: 0 2px 10px rgba(30, 50, 70, 0.08);
+      transition: border 0.2s;
+    }
+    form input:focus, form select:focus, form textarea:focus {
+      outline: none;
+      border: 1.5px solid #36a1f2;
+    }
+    form textarea {
+      min-height: 80px;
+      resize: vertical;
+    }
+    .upload-section {
+      margin-top: 1.2em;
+      margin-bottom: 1.2em;
+    }
+    .upload-section input[type="file"] {
+      background: #232936;
+      color: #a7e7ff;
+      border: none;
+      font-size: 1em;
+    }
+    button[type="submit"] {
+      background: linear-gradient(90deg, #36a1f2 60%, #46d6a3 100%);
+      color: #232a35;
+      border: none;
+      border-radius: 30px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      padding: 1em 2em;
+      font-size: 1.12em;
+      transition: background 0.2s, color 0.2s;
+      cursor: pointer;
+      box-shadow: 0 2px 12px rgba(40,140,190,0.14);
+      margin-top: 1.2em;
+      margin-bottom: .45em;
+      filter: brightness(0.96);
+    }
+    button[type="submit"]:hover {
+      background: linear-gradient(90deg, #46d6a3 50%, #36a1f2 100%);
+      color: #1d2b3b;
+      filter: brightness(1.09);
+    }
+    @media (max-width: 600px) {
+      .application-container { padding: 1em; }
+      header { padding: 1em 0 .4em 0; }
+      h1 { font-size: 1.2em; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Apply for a Position at <span class="accent">HomeMedic</span></h1>
+    <p>Fill out the form below to start your application</p>
+  </header>
+  <div class="application-container">
+    <form>
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" required placeholder="Your name">
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" required placeholder="Your email">
+
+      <label for="phone">Phone Number</label>
+      <input type="text" id="phone" name="phone" required placeholder="Your contact number">
+
+      <label for="job">Select a Job Position</label>
+      <select id="job" name="job" required>
+        <option value="">-- Select Job --</option>
+        <option value="Registered Nurse – Clinical Care Team">Registered Nurse – Clinical Care Team</option>
+        <option value="Software Engineer – Technology Group">Software Engineer – Technology Group</option>
+        <option value="Customer Service Representative – Support Team">Customer Service Representative – Support Team</option>
+      </select>
+
+      <label for="why">Why do you want to apply for this job?</label>
+      <textarea id="why" name="why" required placeholder="Share your motivation or experience"></textarea>
+
+      <label for="experience">Tell us about experience/skills relevant to this position:</label>
+      <textarea id="experience" name="experience" required placeholder="Briefly describe your background for the chosen job"></textarea>
+
+      <div class="upload-section">
+        <label for="resume">Upload Your Resume</label>
+        <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx">
+      </div>
+
+      <button type="submit" disabled>Submit Application</button>
+    </form>
+  </div>
+</body>
+</html>

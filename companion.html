@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Companionship Services | Home Care</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    :root {
+      --primary: #134e6f;
+      --secondary: #f3f7fb;
+      --accent: #f8a01b;
+      --text: #333333;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background-color: #ffffff;
+      line-height: 1.6;
+    }
+
+    header {
+      background: var(--primary);
+      color: #ffffff;
+      padding: 1rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    header .logo {
+      font-weight: bold;
+      font-size: 1.3rem;
+    }
+
+    nav a {
+      color: #ffffff;
+      margin-left: 1rem;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      padding: 2rem 1.5rem;
+      background: var(--secondary);
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) minmax(0, 1.5fr);
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .hero h1 {
+      margin-top: 0;
+      color: var(--primary);
+    }
+
+    .hero p {
+      margin-bottom: 1.2rem;
+    }
+
+    .hero .cta-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 0.5rem;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 4px;
+      font-size: 0.95rem;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #ffffff;
+      font-weight: bold;
+    }
+
+    .btn-secondary {
+      background: #ffffff;
+      color: var(--primary);
+      border: 1px solid var(--primary);
+    }
+
+    .hero-image-placeholder {
+      width: 100%;
+      min-height: 220px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #f8f9fb 0%, #dde9f5 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 1rem;
+      color: #445;
+      font-size: 0.95rem;
+    }
+
+    main {
+      padding: 2rem 1.5rem 3rem;
+      max-width: 1120px;
+      margin: 0 auto;
+    }
+
+    section {
+      margin-bottom: 2rem;
+    }
+
+    h2 {
+      margin-top: 0;
+      color: var(--primary);
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.5rem;
+    }
+
+    .benefits-list ul,
+    .difference-list ul {
+      padding-left: 1.2rem;
+    }
+
+    .benefits-list li,
+    .difference-list li {
+      margin-bottom: 0.4rem;
+    }
+
+    .info-card {
+      background: var(--secondary);
+      padding: 1rem 1.25rem;
+      border-radius: 6px;
+    }
+
+    .pricing-cta {
+      background: #fff8ec;
+      border: 1px solid #ffe0b3;
+      padding: 1.25rem 1.5rem;
+      border-radius: 6px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .pricing-cta h3 {
+      margin: 0 0 0.3rem;
+      color: #bf6a00;
+    }
+
+    .scheduling-options ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .scheduling-options li::before {
+      content: "• ";
+      color: var(--primary);
+      font-weight: bold;
+    }
+
+    .scheduling-options li {
+      margin-bottom: 0.35rem;
+    }
+
+    .testimonials {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .testimonial {
+      background: #fafafa;
+      border-left: 4px solid var(--primary);
+      padding: 1rem 1.25rem;
+      border-radius: 4px;
+      font-size: 0.95rem;
+    }
+
+    .testimonial .name {
+      font-weight: bold;
+      margin-top: 0.5rem;
+    }
+
+    .contact-panel {
+      background: var(--secondary);
+      padding: 1.25rem 1.5rem;
+      border-radius: 6px;
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) minmax(0, 1.3fr);
+      gap: 1.5rem;
+      align-items: center;
+    }
+
+    .contact-details p {
+      margin: 0.2rem 0;
+      font-size: 0.95rem;
+    }
+
+    .contact-actions {
+      text-align: right;
+    }
+
+    .companion-photos {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.75rem;
+      margin-top: 0.75rem;
+    }
+
+    .photo-card {
+      background: #f5f5f5;
+      border-radius: 6px;
+      min-height: 110px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.75rem;
+      text-align: center;
+      font-size: 0.85rem;
+      color: #555;
+    }
+
+    footer {
+      padding: 1rem 1.5rem;
+      text-align: center;
+      background: #f4f4f4;
+      font-size: 0.85rem;
+      color: #777;
+    }
+
+    @media (max-width: 900px) {
+      .hero,
+      .contact-panel {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-actions {
+        text-align: left;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .grid-2 {
+        grid-template-columns: 1fr;
+      }
+
+      .companion-photos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        margin-top: 0.5rem;
+      }
+
+      nav a {
+        margin-left: 0;
+        margin-right: 1rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .companion-photos {
+        grid-template-columns: 1fr;
+      }
+
+      .hero,
+      main {
+        padding: 1.25rem 1rem;
+      }
+
+      header {
+        padding: 0.75rem 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">Home Medic Home Services</div>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Services</a>
+    <a href="#">Companionship Care</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div>
+    <h1>Companionship Services</h1>
+    <p>
+      Companionship care provides social, emotional, and practical support for seniors and adults who wish to remain at home but may feel isolated or need a friendly, reliable presence.
+    </p>
+    <p>
+      Our companions offer conversation, activities, light assistance, and safety awareness so that you or your loved one can stay independent and engaged in daily life.
+    </p>
+    <div class="cta-buttons">
+      <a href="#contact" class="btn-primary">Get Started</a>
+      <a href="#pricing" class="btn-secondary">Request a Quote</a>
+    </div>
+  </div>
+  <div class="hero-image-placeholder">
+  <img src="https://i.ibb.co/Y7KTBFBX/companionship-walk.webp"
+       alt="Caregiver walking with an older adult in a park"
+       style="width:100%; height:auto; border-radius:8px; object-fit:cover;">
+</div>
+</section>
+
+<main>
+  <section id="overview" class="grid-2">
+    <div class="info-card">
+      <h2>What is Companionship Care</h2>
+      <p>
+        Companionship care focuses on social interaction and emotional support rather than medical treatment. It is designed for individuals who are generally medically stable but may feel lonely, bored, or anxious when left alone.
+      </p>
+      <p>
+        Companions can visit at home, accompany clients into the community, and support day to day routines while encouraging engagement, dignity, and confidence.
+      </p>
+    </div>
+    <div class="benefits-list">
+      <h2>Benefits of Companionship</h2>
+      <ul>
+        <li>Reduces loneliness and social isolation through meaningful conversation and regular visits.</li>
+        <li>Supports emotional wellbeing and mental health by building trusted relationships.</li>
+        <li>Provides an extra set of eyes and ears for basic safety monitoring at home and in the community.</li>
+        <li>Helps maintain independence with light assistance and encouragement rather than taking over tasks.</li>
+        <li>Offers peace of mind to families who cannot be physically present all the time.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="scheduling" class="grid-2">
+    <div class="scheduling-options info-card">
+      <h2>Flexible Scheduling Options</h2>
+      <p>
+        Companionship services can be tailored around your routines and preferences. Choose the level of support that feels right today and adjust as needs change over time.
+      </p>
+      <ul>
+        <li>Hourly visits for errands, walks, conversation, or outings.</li>
+        <li>Part day or full day support on selected days each week.</li>
+        <li>Evening and weekend visits for meals, activities, or appointments.</li>
+        <li>Overnight or live in companionship when constant presence is desired.</li>
+      </ul>
+    </div>
+    <div class="difference-list">
+      <h2>How It Differs from Medical Home Care</h2>
+      <p>
+        Companionship care is non medical. Companions do not perform nursing tasks such as wound care, injections, or medication administration.
+      </p>
+      <p>
+        Instead, they focus on social engagement, emotional support, and practical help like conversation, games, walks, card playing, reading, meal companionship, and light household assistance. Medical home care can be added separately if clinical needs arise.
+      </p>
+    </div>
+  </section>
+
+  <section id="pricing">
+    <div class="pricing-cta">
+      <div>
+        <h3>Pricing and Personalized Plans</h3>
+        <p>
+          Rates vary based on visit length, frequency, and level of support. We will work with you to design a companionship plan that fits your needs and budget.
+        </p>
+        <p>
+          Share a few details about your situation and our care coordinator will provide a clear estimate with no obligation.
+        </p>
+      </div>
+      <div>
+        <a href="#contact" class="btn-primary">Request a Quote</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonials">
+    <h2>Client Stories</h2>
+    <div class="testimonials">
+      <div class="testimonial">
+        “Knowing that someone visits my mother several afternoons each week has changed everything for our family. She looks forward to their walks and card games and seems happier and more social than she has in years.”
+        <div class="name">Daughter of a companionship client</div>
+      </div>
+      <div class="testimonial">
+        “I am still able to live at home, but having a friendly companion for appointments and shopping makes me feel safer and less alone. It is like having a trusted neighbor who really understands me.”
+        <div class="name">Companionship care client</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="photos">
+    <h2>Companionship in Action</h2>
+    <p>
+      Companions support clients through everyday moments that bring comfort and connection. These are examples of the types of activities our companions enjoy with clients.
+    </p>
+    <div class="companion-photos">
+  <div class="photo-card">
+    <img src="https://i.ibb.co/SX0pyX6k/female-caregiver-senior-woman-walker-260nw-2473456387.webp"        
+         style="width:100%; height:110px; object-fit:cover; border-radius:6px 6px 0 0;">
+  </div>
+  <div class="photo-card">
+    <img src="https://i.ibb.co/RkBCHqwT/joyful-senior-woman-walks-arminarm-600nw-2514784005.webp"
+         alt="Companion sharing tea and conversation at home"
+         style="width:100%; height:110px; object-fit:cover; border-radius:6px 6px 0 0;">
+  </div>
+  <div class="photo-card">
+    <img src="images/companionship-games.jpg"
+         alt="Senior and companion playing board games"
+         style="width:100%; height:110px; object-fit:cover; border-radius:6px 6px 0 0;">
+    <p>Playing board games, cards, or puzzles to stay mentally active.</p>
+  </div>
+  <div class="photo-card">
+    <img src="images/companionship-reading.jpg"
+         alt="Companion reading with a senior at home"
+         style="width:100%; height:110px; object-fit:cover; border-radius:6px 6px 0 0;">
+    <p>Reading together, listening to music, or looking through photo albums.</p>
+  </div>
+  <div class="photo-card">
+    <img src="images/companionship-outing.jpg"
+         alt="Companion accompanying a senior to an appointment"
+         style="width:100%; height:110px; object-fit:cover; border-radius:6px 6px 0 0;">
+    <p>Accompanying clients to appointments, community events, or simple outings.</p>
+  </div>
+  <div class="photo-card">
+    <img src="images/companionship-meal.jpg"
+         alt="Companion helping with a light meal in the kitchen"
+         style="width:100%; height:110px; object-fit:cover; border-radius:6px 6px 0 0;">
+    <p>Light help with meals and household tasks while keeping conversation flowing.</p>
+  </div>
+</div>
+  </section>
+
+  <section id="contact">
+    <div class="contact-panel">
+      <div class="contact-details">
+        <h2>Talk with a Care Coordinator</h2>
+        <p>
+          Have questions about whether companionship care is right for you or your loved one We are happy to listen, answer questions, and help you explore options.
+        </p>
+        <p><strong>Phone:</strong> (555) 123 4567</p>
+        <p><strong>Email:</strong> care@HomeMedichome.com</p>
+        <p><strong>Office Hours:</strong> Monday to Friday, 8 00 AM to 6 00 PM</p>
+      </div>
+      <div class="contact-actions">
+        <p>
+          Share your contact details and preferred times and we will schedule a free consultation.
+        </p>
+        <a href="#" class="btn-primary">Schedule a Consultation</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  © 2025 Home Medic Home Services. All rights reserved.
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siji Varghese Profile</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;400;500;700&display=swap');
+
+        /* --- RESET & BASE STYLES --- */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #f0f0f0;
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* --- MAIN CONTAINER --- */
+        .resume-container {
+            width: 1200px;
+            max-width: 100%;
+            background-color: #fff;
+            display: flex;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            overflow: hidden; /* Ensures rounded corners if applied clip content */
+        }
+
+        /* --- LEFT COLUMN (Contains Bio Header + Info Grid) --- */
+        .left-column {
+            flex: 3.2; /* Takes up roughly 75% of width */
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* --- RIGHT COLUMN (Sidebar) --- */
+        .right-column {
+            flex: 1.3; /* Takes up roughly 25% of width */
+            background-color: #1a1a1a; /* Very Dark Grey/Black */
+            color: #ecf0f1;
+            padding: 30px 20px;
+            border-left: 1px solid #333;
+            font-size: 0.85rem;
+        }
+
+        /* --- HEADER SECTION (Inside Left Column) --- */
+        .header-section {
+            background-color: #2c2c2c; /* Dark Grey matching the image header */
+            color: white;
+            padding: 40px;
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            position: relative;
+        }
+
+        .profile-photo {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            border: 4px solid #c5a065; /* Gold Border */
+            object-fit: cover;
+            flex-shrink: 0;
+            background-color: #ddd; /* Placeholder color */
+            /* REPLACE URL BELOW WITH YOUR IMAGE */
+            background-image: url('https://via.placeholder.com/160'); 
+            background-size: cover;
+            background-position: center;
+        }
+
+        .header-content h1 {
+            font-family: 'Playfair Display', serif;
+            color: #c5a065; /* Gold Text */
+            font-size: 2.5rem;
+            margin-bottom: 5px;
+            line-height: 1;
+        }
+
+        .header-content .title {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #ddd;
+            margin-bottom: 15px;
+            border-left: 2px solid #c5a065;
+            padding-left: 10px;
+        }
+
+        .header-content .bio-text {
+            font-size: 0.85rem;
+            line-height: 1.5;
+            color: #ccc;
+            text-align: justify;
+        }
+
+        /* --- INFO GRID SECTION (Inside Left Column) --- */
+        .info-grid {
+            background-color: #fffcf5; /* Light Cream Background */
+            padding: 30px 40px;
+            flex-grow: 1; /* Fills remaining height */
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr; /* 3 Columns */
+            gap: 20px;
+            color: #222;
+        }
+
+        .column h3 {
+            font-size: 0.9rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #1a1a1a;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 5px;
+        }
+
+        .column ul {
+            list-style: none;
+        }
+
+        .column ul li {
+            font-size: 0.8rem;
+            margin-bottom: 8px;
+            padding-left: 15px;
+            position: relative;
+            line-height: 1.4;
+        }
+
+        /* Checkmark Bullets for left side */
+        .column ul li::before {
+            content: "✓"; 
+            position: absolute;
+            left: 0;
+            color: #000;
+            font-weight: bold;
+        }
+
+        /* --- RIGHT SIDEBAR STYLING --- */
+        .sidebar-section {
+            margin-bottom: 30px;
+        }
+
+        .sidebar-title {
+            color: #c5a065; /* Gold */
+            font-size: 1rem;
+            text-transform: uppercase;
+            font-weight: bold;
+            border-bottom: 1px solid #444;
+            padding-bottom: 8px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .sidebar-title::before {
+            content: "★"; /* Star/Badge icon */
+            margin-right: 8px;
+            font-size: 1.2rem;
+        }
+
+        .right-column ul {
+            list-style: none;
+        }
+
+        .right-column ul li {
+            margin-bottom: 10px;
+            padding-left: 15px;
+            position: relative;
+            line-height: 1.4;
+            color: #ddd;
+        }
+
+        /* Diamond Bullets for sidebar */
+        .right-column ul li::before {
+            content: "❖";
+            position: absolute;
+            left: -2px;
+            font-size: 0.7rem;
+            top: 3px;
+            color: #c5a065;
+        }
+
+        /* Education block spacing */
+        .education-block {
+            margin-bottom: 15px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="resume-container">
+        
+        <div class="left-column">
+            
+            <div class="header-section">
+                <div class="profile-photo"></div>
+                
+                <div class="header-content">
+                    <h1>Siji Varghese</h1>
+                    <div class="title">Keynote Speaker | Consultant | Certified Coach</div>
+                    <div class="bio-text">
+                        Siji Varghese is a globally recognized Leadership & Behavioural Change Expert with over 26 years of diverse professional experience. She is known for empowering leaders—especially women—through transformative learning journeys.<br><br>
+                        A celebrated TEDx Speaker, LinkedIn Top Voice, UN KarmaVeer Chakra recipient, and global facilitator, she has conducted 1200+ workshops for 85,000+ participants. Her work blends powerful storytelling, psychological insight, and ROI-driven methodologies.
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-grid">
+                <div class="column">
+                    <h3>Area of Expertise</h3>
+                    <ul>
+                        <li>Leadership Development & Executive Presence</li>
+                        <li>People Management & Managerial Effectiveness</li>
+                        <li>Women-Centric Programs – Leaders in Lipstick®</li>
+                        <li>Behavioral Change & Emotional Intelligence</li>
+                        <li>Change Management & Conflict Resolution</li>
+                        <li>Coaching & Feedback Conversations</li>
+                        <li>Interpersonal Skills & Communication</li>
+                        <li>Team Building & Human Effectiveness</li>
+                        <li>Keynote Speaking & Motivational Talks</li>
+                        <li>Design Thinking Applications</li>
+                        <li>NLP-Based Behavioural Transformation</li>
+                    </ul>
+                </div>
+
+                <div class="column">
+                    <h3>Client Partnership</h3>
+                    <ul>
+                        <li>IIM Ahmedabad</li>
+                        <li>CII – Confederation of Indian Industry</li>
+                        <li>SRK Bharat Vidyut Pvt. Ltd.</li>
+                        <li>Various Fortune 500 companies</li>
+                        <li>Multiple corporates across manufacturing, BFSI, IT & services</li>
+                        <li>Kala Ghoda Arts Festival</li>
+                        <li>Government & global empowerment networks</li>
+                    </ul>
+                </div>
+
+                <div class="column">
+                    <h3>Sectors Collaborated</h3>
+                    <ul>
+                        <li>Banking & Financial Services (BFSI)</li>
+                        <li>FMCG & Consumer Products</li>
+                        <li>IT & Technology</li>
+                        <li>Education, Universities & B-Schools</li>
+                        <li>Manufacturing & Engineering</li>
+                        <li>Public Sector & Government Bodies</li>
+                        <li>Corporate Leadership & Development</li>
+                        <li>Women Workforce Development Ecosystem</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="right-column">
+            
+            <div class="sidebar-section">
+                <div class="sidebar-title">Certification / Recognition</div>
+                <ul>
+                    <li>United Nations KarmaVeer Chakra Awardee</li>
+                    <li>LinkedIn Top Voice</li>
+                    <li>Certified Lions Instructor (LCIP), Lions International</li>
+                    <li>Associate Certified Coach (ACC) – ICF</li>
+                    <li>Certified Trainer – IBCT</li>
+                    <li>Certified Outbound Trainer – IPPE</li>
+                    <li>Certified in Basic Transactional Analysis – ICTA</li>
+                    <li>Certified Master Practitioner of NLP – Richard McHugh</li>
+                    <li>Certified in Emotional Skills Assessment Process (ESAP®)</li>
+                    <li>Certified in REBT – Albert Ellis Institute, USA</li>
+                    <li>Certified Facilitator (CPF) – IAF</li>
+                    <li>Certified Graphologist – Graphology Research Institute</li>
+                    <li>Certified in Design Thinking – Anagram Group</li>
+                    <li>Theatre Games for Trainers – ATIF</li>
+                    <li>International WEE Rising Women Award</li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <div class="sidebar-title">Education</div>
+                <div class="education-block">
+                    <ul>
+                        <li>MBA – Financial Management, University of Pune</li>
+                        <li>Diploma – Stock Market Derivatives, JBIMS, Mumbai</li>
+                        <li>Certified in ROI Methodology®, ROI Institute (USA)</li>
+                        <li>Certified in Consultative Framework for ROI Practice</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
